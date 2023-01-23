@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  background-color: hsl(204deg, 43%, 93%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Karla", sans-serif;
+  position: relative;
+}
+.main .card {
+  width: 90%;
+  margin: 4em auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.main .card .card__container {
+  padding: 1.3em 1.2em;
+}
+.main .card .community {
+  background-color: #fff;
+}
+.main .card .community__title {
+  font-size: 2.3rem;
+  color: hsl(179deg, 62%, 43%);
+  font-weight: 700;
+}
+.main .card .community__subtitle {
+  margin: 0.5em 0;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: hsl(71deg, 73%, 54%);
+}
+.main .card .community__paragraph {
+  font-size: 1.5rem;
+  color: hsl(218deg, 22%, 67%);
+  font-weight: 400;
+}
+.main .card .subscription {
+  background-color: hsl(179deg, 62%, 43%);
+}
+.main .card .subscription__title {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-bottom: 0.5em;
+}
+.main .card .subscription__paragraph {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+.main .card .subscription__paragraph-span {
+  font-size: 1.3rem;
+  color: rgba(229, 239, 245, 0.7);
+  font-weight: 400;
+}
+.main .card .subscription__paragraph-active {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+  color: hsl(204deg, 43%, 93%);
+}
+.main .card .subscription__button {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.6em 0;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(71deg, 73%, 54%);
+  color: hsl(204deg, 43%, 93%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  box-shadow: 0px 0px 10px 0px rgba(152, 166, 189, 0.5);
+}
+.main .card .whyUs {
+  background-color: rgba(42, 178, 175, 0.7);
+}
+.main .card .whyUs__title {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-bottom: 0.8em;
+}
+.main .card .whyUs__paragraph {
+  color: rgba(229, 239, 245, 0.8);
+  font-size: 1.5rem;
+}
+.main__attribution {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  text-align: end;
+  line-height: 1.2;
+  font-size: 1.1rem;
+  color: rgba(42, 178, 175, 0.8);
+}
+.main__attribution a {
+  color: hsl(179deg, 62%, 43%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 550px) {
+  .main {
+    font-size: 1.7rem;
+  }
+  .main .card {
+    margin: 0 auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "join join" "subs why";
+  }
+  .main .card .community {
+    grid-area: join;
+  }
+  .main .card .community__title {
+    font-size: 2.5rem;
+  }
+  .main .card .community__subtitle {
+    font-size: 1.9rem;
+  }
+  .main .card .community__paragraph {
+    font-size: 1.7rem;
+  }
+  .main .card .subscription {
+    grid-area: subs;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .main .card .subscription__title {
+    font-size: 1.9rem;
+  }
+  .main .card .subscription__paragraph {
+    font-size: 2.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .main .card .subscription__paragraph-span {
+    font-size: 1.4rem;
+  }
+  .main .card .subscription__paragraph-active {
+    font-size: 1.7rem;
+  }
+  .main .card .subscription__button {
+    font-size: 1.7rem;
+  }
+  .main .card .whyUs {
+    grid-area: why;
+  }
+  .main .card .whyUs__title {
+    font-size: 1.9rem;
+  }
+  .main .card .whyUs__paragraph {
+    font-size: 1.7rem;
+  }
+  .main__attribution {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=index.css.map */

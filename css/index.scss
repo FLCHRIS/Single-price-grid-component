@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+$fontKarla: 'Karla', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+.main {
+    background-color: $LightGray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: $fontKarla;
+    position: relative;
+    .card {
+        width: 90%;
+        margin: 4em auto;
+        overflow: hidden;
+        border-radius: 6px;
+        .card__container {
+            padding: 1.3em 1.2em;
+        }
+        .community {
+            background-color: #fff;
+            &__title {
+                font-size: 2.3rem;
+                color: $Cyan;
+                font-weight: 700;
+            }
+            &__subtitle {
+                margin: .5em 0;
+                font-size: 1.7rem;
+                line-height: 1.2;
+                color: $BrightYellow;
+            }
+            &__paragraph {
+                font-size: 1.5rem;
+                color: $GrayishBlue;
+                font-weight: 400;
+            }
+        }
+        .subscription {
+            background-color: $Cyan;
+            &__title {
+                color: #fff;
+                font-size: 1.7rem;
+                margin-bottom: .5em;
+            }
+            &__paragraph {
+                color: #fff;
+                font-size: 2.5rem;
+                font-weight: 700;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .5em;
+                &-span {
+                    font-size: 1.3rem;
+                    color: rgba($LightGray, .7);
+                    font-weight: 400;
+                }
+            }
+            &__paragraph-active {
+                font-weight: 400;
+                font-size: 1.5rem;
+                margin-bottom: 1.5em;
+                color: $LightGray;
+            }
+            &__button {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                padding: .6em 0;
+                border-radius: 5px;
+                border: none;
+                background-color: $BrightYellow;
+                color: $LightGray;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: .5em;
+                box-shadow: 0px 0px 10px 0px rgba($GrayishBlue, .5);
+            }
+        }
+        .whyUs {
+            background-color: rgba($Cyan, .7);
+            &__title {
+                color: #fff;
+                font-size: 1.7rem;
+                margin-bottom: .8em;
+            }
+            &__paragraph {
+                color: rgba($LightGray, .8);
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__attribution {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        text-align: end;
+        line-height: 1.2;
+        font-size: 1.1rem;
+        color: rgba($Cyan, .8);
+        a {
+            color: $Cyan;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: 550px){
+    .main {
+        font-size: 1.7rem;
+        .card {
+            margin: 0 auto;
+            max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, max-content);
+            grid-template-areas: 
+            "join join"
+            "subs why"
+            ;
+            .community {
+                grid-area: join;
+                &__title {
+                    font-size: 2.5rem;
+                }
+                &__subtitle {
+                    font-size: 1.9rem;
+                }
+                &__paragraph {
+                    font-size: 1.7rem;
+                }
+            }
+            .subscription {
+                grid-area: subs;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                &__title {
+                    font-size: 1.9rem;
+                }
+                &__paragraph {
+                    font-size: 2.7rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: .5em;
+                    &-span {
+                        font-size: 1.4rem;
+                    }
+                }
+                &__paragraph-active {
+                    font-size: 1.7rem;
+                }
+                &__button {
+                    font-size: 1.7rem;
+                }
+            }
+            .whyUs {
+                grid-area: why;
+                &__title {
+                    font-size: 1.9rem;
+                }
+                &__paragraph {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        &__attribution {
+            font-size: 1.2rem;
+        }
+    }
+}
