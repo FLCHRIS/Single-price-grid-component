@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL]()
-- [Live site URL]()
+- [Live site URL](https://euphonious-belekoy-b51623.netlify.app/)
 
 ## My process
 
@@ -47,4 +47,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor [FLCHRIS](https://www.frontendmentor.io/profile/FLCHRIS)
+- Frontend Mentor [Christian](https://www.frontendmentor.io/profile/FLCHRIS)
